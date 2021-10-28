@@ -1,15 +1,8 @@
-# Goal
+pipeline{ 
+    agent any
 
-- You can start jenkins
-
-
-```groovy
-
-pipeline{ // top level
-    agent any // where to execute
-
-    stages { // where the work happens
-        // 내부에는 stage 와 steps로 구성
+    stages { 
+        
         stage("build") {
             steps {
                 sh 'echo hihi'
@@ -29,4 +22,3 @@ pipeline{ // top level
         }
     }
 }
-```
