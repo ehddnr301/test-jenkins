@@ -5,7 +5,7 @@ pipeline{
         
         stage("build") {
             steps {
-                sh pwd
+                sh 'pwd'
             }
         }
 
