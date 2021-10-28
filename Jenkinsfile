@@ -5,7 +5,12 @@ pipeline{
         
         stage("build") {
             steps {
-                sh 'echo hihi'
+                echo 'hihi'
+
+                script {
+                    def test  = 2 + 5 > 3 ? 'true' : 'false'
+                    echo test
+                }
             }
         }
 
