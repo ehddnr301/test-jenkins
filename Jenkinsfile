@@ -5,18 +5,13 @@ pipeline{
         
         stage("build") {
             steps {
-                echo 'hihi'
-
-                script {
-                    def test  = 2 + 5 > 3 ? 'true' : 'false'
-                    echo test
-                }
+                sh pwd
             }
         }
 
         stage("test") {
             steps {
-                sh 'echo testest'
+                sh 'git clone https://github.com/ehddnr301/test-jenkins'
             }
         }
 
